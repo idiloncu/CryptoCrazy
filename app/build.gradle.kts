@@ -1,8 +1,10 @@
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.google.devtools.ksp)
     //id("com.google.dagger.hilt.android")
+
 }
 
 android {
@@ -55,6 +57,7 @@ dependencies {
     // Dagger Hilt
     implementation(libs.google.dagger.hilt)
     ksp(libs.google.dagger.hilt.compiler)
+    implementation(libs.google.dagger.hilt.plugin)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

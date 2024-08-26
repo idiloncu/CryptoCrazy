@@ -15,8 +15,8 @@ devtoolskspVersion="1.9.10-1.0.13"
 [libraries]
 google-dagger-hilt-compiler={group="com.google.dagger",name="hilt-android-compiler",version.ref="hiltVersion"}
 google-dagger-hilt={group="com.google.dagger",name="hilt-android",version.ref="hiltVersion"}
-
 google-dagger-hilt-plugin={group="com.google.dagger",name="hilt-android-gradle-plugin",version.ref="hiltVersion"}
+
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
