@@ -1,4 +1,4 @@
-package com.example.cryptocrazy.use_case
+package com.example.cryptocrazy.domain
 
 import android.net.http.HttpException
 import android.os.Build
