@@ -10,12 +10,20 @@ activityCompose = "1.9.1"
 composeBom = "2024.04.01"
 hiltVersion="2.47"
 devtoolskspVersion="1.9.10-1.0.13"
+retrofit="2.9.0"
+okhttpVersion="3.6.0"
+retrofitInterceptorVersion="4.9.3"
 
 
 [libraries]
 google-dagger-hilt-compiler={group="com.google.dagger",name="hilt-android-compiler",version.ref="hiltVersion"}
 google-dagger-hilt={group="com.google.dagger",name="hilt-android",version.ref="hiltVersion"}
 google-dagger-hilt-plugin={group="com.google.dagger",name="hilt-android-gradle-plugin",version.ref="hiltVersion"}
+
+squareup-retrofit={group="com.squareup.retrofit2",name="retrofit",version.ref="retrofit"}
+squareup-retrofit2={group="com.squareup.retrofit2",name="converter-gson",version.ref="retrofit"}
+squareup-okhttp3={group="com.squareup.okhttp3",name="okhttp",version.ref="okhttpVersion"}
+squareup-okhttp3-logging-interceptor={group="com.squareup.okhttp3",name="logging-interceptor",version.ref="retrofitInterceptorVersion"}
 
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -36,4 +44,5 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 google-devtools-ksp={id="com.google.devtools.ksp",version.ref="devtoolskspVersion"}
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+dagger-hilt-android={id="com.google.dagger.hilt.android",version.ref="hiltVersion"}
 
