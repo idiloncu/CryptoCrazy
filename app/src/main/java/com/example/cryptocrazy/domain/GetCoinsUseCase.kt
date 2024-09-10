@@ -17,7 +17,7 @@ class GetCoinsUseCase @Inject constructor(
 
 ) {
     @RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
-    operator fun invoke(): Flow<Resource<List<Coin>>> = flow {
+    operator fun invoke(coinId: String): Flow<Resource<List<Coin>>> = flow {
         try {
             emit(Resource.Loading())
             val coins = repository.getCoins().map { it.toCoin() }
