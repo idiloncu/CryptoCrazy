@@ -26,7 +26,9 @@ data class CoinDetailDto(
     val tags: List<Tag>,
     val team: List<TeamMember>,
     val type: String,
-    val whitepaper: Whitepaper
+    val whitepaper: Whitepaper,
+    val size: Int
+
 )
 
 fun CoinDetailDto.toCoinDetail():CoinDetail{
@@ -38,6 +40,7 @@ fun CoinDetailDto.toCoinDetail():CoinDetail{
         rank = rank,
         is_active = is_active,
         tags = tags.map { it.name },
-        team = team
+        team = team,
+        size = tags.size
     )
 }

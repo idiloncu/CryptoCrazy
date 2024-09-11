@@ -7,3 +7,9 @@ data class CoinListState(
     val coins:List<Coin> = emptyList(),
     val error:String=""
 )
+data class Coin(
+    val coinId: String,
+    val name: String,
+    val rank: Int,
+    val is_active: Boolean
+)

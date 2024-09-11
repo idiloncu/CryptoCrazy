@@ -19,15 +19,15 @@ class GetCoinsUseCase @Inject constructor(
     @RequiresExtension(extension = Build.VERSION_CODES.S, version = 7)
     operator fun invoke(coinId: String): Flow<Resource<List<Coin>>> = flow {
         try {
-            emit(Resource.Loading())
+            emit(Resource.Loading<List<Coin>>())
             val coins = repository.getCoins().map { it.toCoin() }
-            emit(Resource.Success(coins))
+            emit(Resource.Success<List<Coin>>(coins))
         }
         catch (e: HttpException){
-            emit(Resource.Error(e.localizedMessage ?: "An unexpected error occured"))
+            emit(Resource.Error<List<Coin>>(e.localizedMessage ?: "An unexpected error occured"))
         }
         catch (e:IOException){
-            emit(Resource.Error("No internet connection"))
+            emit(Resource.Error<List<Coin>>("No internet connection"))
 
         }
     }

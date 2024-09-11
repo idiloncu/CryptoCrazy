@@ -14,7 +14,6 @@ retrofit="2.9.0"
 okhttpVersion="3.6.0"
 retrofitInterceptorVersion="4.9.3"
 
-
 [libraries]
 google-dagger-hilt-compiler={group="com.google.dagger",name="hilt-android-compiler",version.ref="hiltVersion"}
 google-dagger-hilt={group="com.google.dagger",name="hilt-android",version.ref="hiltVersion"}
